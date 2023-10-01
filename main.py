@@ -1,22 +1,16 @@
-#define the base class player 
-class player:
-  def play(self):
-    print("the player is playing cricket. ")
+def linearSearchProduct(productList, targetProduct):
+  indices = []
 
-#define the derived class batsman
-class batsman(player):
-  def play(self):
-    print(" the batsman is batting.")
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
 
-#define the derived class bowler
-class bowler(player):
-  def play(self):
-    print("the bowler is bowling.")
+  return indices
 
-#create objects of batsman and bowler classes 
-batsman = batsman()
-bowler = bowler()
 
-#call the play() method for each object 
-batsman.play()
-bowler.play()
+# Example usage:
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+target2 = 'apple'
+result = linearSearchProduct(products, target)
+print(result)
